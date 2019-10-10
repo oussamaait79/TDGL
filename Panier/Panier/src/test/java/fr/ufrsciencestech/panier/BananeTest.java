@@ -18,10 +18,10 @@ import static org.junit.Assert.*;
  *
  * @author af433882
  */
-public class OrangeTest {
-    private Orange mok1;
+public class BananeTest {
+    private Banane mok1;
     
-    public OrangeTest() {
+    public BananeTest() {
     }
     
     @BeforeClass
@@ -34,7 +34,7 @@ public class OrangeTest {
     
     @Before
     public void setUp() throws Exception{
-        mok1 = new Orange(0.5,"France");
+        mok1 = new Banane(0.5,"France");
     }
     
     @After
@@ -47,7 +47,7 @@ public class OrangeTest {
     @Test
     public void testGetPrix() {
         System.out.println("getPrix");
-        Orange instance = mok1;
+        Banane instance = mok1;
         double expResult = 0.50;
         double result = instance.getPrix();
         assertEquals(expResult, result, 0.0);
@@ -59,7 +59,7 @@ public class OrangeTest {
     @Test
     public void testGetOrigine() {
         System.out.println("getOrigine");
-        Orange instance = mok1;
+        Banane instance = mok1;
         String expResult = "France";
         String result = instance.getOrigine();
         assertEquals(expResult, result);
@@ -72,20 +72,20 @@ public class OrangeTest {
     public void testSetPrix() {
         System.out.println("setPrix");
         double prix = 0.60;
-        Orange instance = mok1;
+        Banane instance = mok1;
         try {
             instance.setPrix(prix);
         } catch (Exception ex) {
-            Logger.getLogger(OrangeTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BananeTest.class.getName()).log(Level.SEVERE, null, ex);
         }
         double result = instance.getPrix();
         assertEquals(prix, result,0.0);
 
 
     }
-     @Test (expected=Exception.class)
+      @Test (expected=Exception.class)
     public void testSetPrixNegatif() {
-        Orange instance = mok1;
+        Banane instance = mok1;
         double prix = -0.60;
         instance.setPrix(prix);
     }
@@ -96,7 +96,7 @@ public class OrangeTest {
     public void testSetOrigine() {
         System.out.println("setOrigine");
         String origine = "Espagne";
-        Orange instance = mok1;
+        Banane instance = mok1;
         instance.setOrigine(origine);
 
     }

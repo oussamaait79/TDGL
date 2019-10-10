@@ -3,13 +3,13 @@ package fr.ufrsciencestech.panier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Orange
+public class Banane
 {
 
     private double prix;
     private String origine;
 
-    public Orange(double p, String o) throws Exception	
+    public Banane(double p, String o) throws Exception	
         {	
 		this.prix=p;
 		this.origine=o;
@@ -29,7 +29,7 @@ public class Orange
 
     public void setPrix(double prix) throws Exception {
         if(prix<0)
-            throw new Exception("prix invalide");
+           throw new Exception("prix invalide");
         this.prix = prix;
     }
 
@@ -39,7 +39,7 @@ public class Orange
 
     @Override
     public String toString() {
-        return "Orange{" + "prix=" + prix + "$, origine=" + origine + '}';
+        return "Banane{" + "prix=" + prix + "$, origine=" + origine + '}';
     }
 
 }
